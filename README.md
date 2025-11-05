@@ -1,6 +1,6 @@
-# gh-proxy-go
+# gh-proxy-rs
 
-这是 [gh-proxy](https://github.com/hunshcn/gh-proxy) 的 Go 语言版本。
+来源  [gh-proxy](https://github.com/hunshcn/gh-proxy) 的 Go 语言版本的重写。
 
 ## 部署详情
 
