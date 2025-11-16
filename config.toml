@@ -1,0 +1,19 @@
+[server]
+address = "127.0.0.1:4000"
+
+[jsdelivr]
+enabled = false
+
+[cache]
+enabled = true
+max_capacity = 1000
+time_to_live = 3600  # 1 hour
+max_memory = 104857600  # 100MB
+
+[rate_limit]
+enabled = true
+requests_per_minute = 60
+
+[git_services]
+gitlab_enabled = true
+bitbucket_enabled = true

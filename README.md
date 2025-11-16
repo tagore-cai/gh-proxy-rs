@@ -1,6 +1,53 @@
 # gh-proxy-rs
 
-来源  [gh-proxy](https://github.com/hunshcn/gh-proxy) 的 Go 语言版本的重写。
+来源 [gh-proxy](https://github.com/hunshcn/gh-proxy) 的 Rust 语言版本重写，支持多 Git 服务代理。
+
+## 功能特性
+
+- 支持 GitHub、GitLab 和 Bitbucket 的代理
+- 内置缓存机制，减少重复请求
+- 请求速率限制，防止滥用
+- 可配置的 jsDelivr 集成
+- 灵活的配置系统（文件配置 + 环境变量）
+
+## 支持的 Git 服务
+
+### GitHub
+- Releases 和归档文件
+- Blob 和原始文件
+- Gists
+- Git 信息和标签
+
+### GitLab
+- 项目归档
+- 原始文件和 blob
+
+### Bitbucket
+- 仓库归档
+- 原始文件
+
+## 配置
+
+```toml
+[server]
+address = "127.0.0.1:4000"
+
+[jsdelivr]
+enabled = false
+
+[cache]
+enabled = true
+max_capacity = 1000
+time_to_live = 3600  # 1 hour
+
+[rate_limit]
+enabled = true
+requests_per_minute = 60
+
+[git_services]
+gitlab_enabled = true
+bitbucket_enabled = true
+```
 
 ## 部署详情
 
